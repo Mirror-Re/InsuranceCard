@@ -47,3 +47,19 @@ input, select{
 .address-text p:last-child {
   margin-bottom: 6px;
 }
+/*change card colors to reflect type of insurance*/
+.card.premium{
+  border: 1px solid #d7ac57;
+  background-color: beige;
+  color: #d7ac57;
+}
+.card.standard{
+  border: 1px solid #999;
+  background-color: darkseagreen;
+  color: #999;
+}
+.card.bronze{
+  border: 1px solid #714740;
+  background-color: bisque;
+  color: #714740;
+}

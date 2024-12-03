@@ -1,4 +1,6 @@
 var express = require('express');
+const {colors} = require("debug");
+const {set} = require("express/lib/application");
 var router = express.Router();
 
 /* GET home page. */
@@ -20,8 +22,9 @@ router.post('/card', function(req, res) {
     zip: req.body.zip,
     accountNumber: createAccountNumber(),
     //if you get a new Date with no value, it automatically uses today's date!
-    currentDate: new Date()
-  })
+    currentDate: new Date(),
+    cardClass: getCardClass(req.body.type)
+  });
 })
 module.exports = router;
 
@@ -32,4 +35,19 @@ function createAccountNumber() {
     accNum += temp;
   }
   return accNum;
+}
+
+
+
+
+function getCardClass(type){
+  if(type === "Premium"){
+    return "premium"
+  } else if (type === "Standard") {
+    return "standard"
+  } else if (type === "Bronze") {
+    return "bronze"
+  } else {
+    return ""
+  }
 }
