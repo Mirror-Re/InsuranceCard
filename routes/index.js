@@ -5,7 +5,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', {
+    firstName: "John",
+    lastName: "Doe",
+    dob: "01/01/2000",
+    addressLine1: "1234 Default Ave",
+    addressLine2: "Apt 001",
+    city: "Fresno",
+    state: "CA",
+    zip: "00000"
+  });
 });
 
 router.post('/card', function(req, res) {

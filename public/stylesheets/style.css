@@ -49,17 +49,26 @@ input, select{
 }
 /*change card colors to reflect type of insurance*/
 .card.premium{
-  border: 1px solid #d7ac57;
+  border: 2px solid #d7ac57;
   background-color: beige;
   color: #d7ac57;
 }
 .card.standard{
-  border: 1px solid #999;
+  border: 2px solid #999;
   background-color: darkseagreen;
   color: #999;
 }
 .card.bronze{
-  border: 1px solid #714740;
+  border: 2px solid #714740;
   background-color: bisque;
   color: #714740;
+}
+
+p.label{
+  color: black;
+}
+
+h3.title{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
 }
